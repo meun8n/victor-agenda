@@ -78,11 +78,13 @@
   border-bottom: 1px solid #333;
 }
 
+/* Texto dos dias e nomes dos dias */
 .custom-calendar .react-datepicker__day,
 .custom-calendar .react-datepicker__day-name {
-  color: #fff;
+  color: #000; /* <- alterado de branco para preto */
 }
 
+/* Dia selecionado */
 .custom-calendar .react-datepicker__day--selected,
 .custom-calendar .react-datepicker__day--keyboard-selected {
   background-color: #f1c40f;
@@ -90,10 +92,18 @@
   border-radius: 50%;
 }
 
+/* Hover */
 .custom-calendar .react-datepicker__day:hover {
   background-color: #444;
+  color: #000;
 }
 
+/* Mês atual e ícone de navegação */
+.custom-calendar .react-datepicker__current-month,
 .custom-calendar .react-datepicker__navigation-icon::before {
-  color: #fff;
+  color: #000; /* <- também alterado para preto */
+}
+
+.custom-calendar .react-datepicker__navigation {
+  top: 10px;
 }
