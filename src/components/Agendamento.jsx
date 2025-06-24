@@ -25,7 +25,9 @@ export default function Agendamento() {
   return (
     <div className="popup-container">
       <h2 className="titulo">Agendamento</h2>
-      <p className="descricao">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+      <p className="descricao">
+        Selecione data, horário e informe o nome do cliente para criar o agendamento
+      </p>
 
       <form onSubmit={handleSubmit}>
         <label>Data</label>
