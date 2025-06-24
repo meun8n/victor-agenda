@@ -1,72 +1,89 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './Agendamento.css';
 
 export default function Agendamento() {
-  const [dataSelecionada, setDataSelecionada] = useState('');
+  const [data, setData] = useState(null);
   const [horaSelecionada, setHoraSelecionada] = useState('');
 
-  const horarios = {
-    manhã: ['09:00', '10:00', '11:00', '12:00'],
-    tarde: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
-    noite: ['19:00', '20:00', '21:00']
+  const horarios = [
+    '09:00', '10:00', '11:00', '12:00',
+    '13:00', '14:00', '15:00', '16:00', '17:00',
+    '18:00', '19:00', '20:00', '21:00'
+  ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (data && horaSelecionada) {
+      alert(`Agendado para ${data.toLocaleDateString()} às ${horaSelecionada}`);
+    } else {
+      alert('Por favor, selecione data e horário.');
+    }
   };
 
   return (
     <div className="popup-container">
-      <div className="popup-card">
-        <h2 className="titulo">Agende um atendimento</h2>
-        <p className="sub">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+      <h2 className="titulo">Agende um atendimento</h2>
+      <p className="descricao">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
 
+      <form onSubmit={handleSubmit}>
         <label>Data</label>
-        <input
-          type="date"
-          value={dataSelecionada}
-          onChange={(e) => setDataSelecionada(e.target.value)}
+        <DatePicker
+          selected={data}
+          onChange={(date) => setData(date)}
+          dateFormat="dd/MM/yyyy"
+          placeholderText="dd / mm / aaaa"
+          className="input-data"
+          calendarClassName="custom-calendar"
         />
 
-        <div className="secao">
+        <div className="horarios">
           <span>Manhã</span>
           <div className="botoes">
-            {horarios.manhã.map((hora) => (
+            {horarios.slice(0, 4).map((h) => (
               <button
-                key={hora}
-                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
-                onClick={() => setHoraSelecionada(hora)}
+                type="button"
+                key={h}
+                className={horaSelecionada === h ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(h)}
               >
-                {hora}
+                {h}
               </button>
             ))}
           </div>
 
           <span>Tarde</span>
           <div className="botoes">
-            {horarios.tarde.map((hora) => (
+            {horarios.slice(4, 9).map((h) => (
               <button
-                key={hora}
-                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
-                onClick={() => setHoraSelecionada(hora)}
+                type="button"
+                key={h}
+                className={horaSelecionada === h ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(h)}
               >
-                {hora}
+                {h}
               </button>
             ))}
           </div>
 
           <span>Noite</span>
           <div className="botoes">
-            {horarios.noite.map((hora) => (
+            {horarios.slice(9).map((h) => (
               <button
-                key={hora}
-                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
-                onClick={() => setHoraSelecionada(hora)}
+                type="button"
+                key={h}
+                className={horaSelecionada === h ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(h)}
               >
-                {hora}
+                {h}
               </button>
             ))}
           </div>
         </div>
 
-        <button className="botao-agendar">AGENDAR</button>
-      </div>
+        <button type="submit" className="botao-agendar">AGENDAR</button>
+      </form>
     </div>
   );
 }
