@@ -1,4 +1,3 @@
-// src/components/Agendamento.jsx
 import React, { useState } from 'react';
 import './Agendamento.css';
 
