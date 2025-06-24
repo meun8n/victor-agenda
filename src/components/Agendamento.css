@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popup-card {
+  background-color: #262626;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.sub {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+  margin-bottom: 1.5rem;
+}
+
+.secao {
+  margin-bottom: 1.5rem;
+}
+
+.secao span {
+  display: block;
+  font-size: 13px;
+  margin: 10px 0 5px;
+  color: #ccc;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hora {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.selecionado {
+  border: 1px solid #f1c40f;
+  background-color: #2a2a2a;
+}
+
+.botao-agendar {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 12px;
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botao-agendar:hover {
+  background-color: #d4ac0d;
+}
