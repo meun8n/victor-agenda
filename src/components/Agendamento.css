@@ -1,41 +1,99 @@
-/* Estiliza o calendário do react-datepicker */
-.react-datepicker {
+/* Estiliza o popup e o calendário do react-datepicker */
+.popup-container {
   background-color: #1e1e1e;
-  border: none;
   color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.descricao {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.input-data {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.hora {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hora.selecionado {
+  border: 1px solid #f1c40f;
+  background-color: transparent;
+  color: #f1c40f;
+}
+
+.botao-agendar {
+  width: 100%;
+  padding: 12px;
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilo do calendário */
+.custom-calendar {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.react-datepicker__header {
+.custom-calendar .react-datepicker__header {
   background-color: #1e1e1e;
   border-bottom: 1px solid #333;
 }
 
-.react-datepicker__day,
-.react-datepicker__day-name {
+.custom-calendar .react-datepicker__day,
+.custom-calendar .react-datepicker__day-name {
   color: #fff;
 }
 
-.react-datepicker__day--selected {
+.custom-calendar .react-datepicker__day--selected,
+.custom-calendar .react-datepicker__day--keyboard-selected {
   background-color: #f1c40f;
   color: #000;
   border-radius: 50%;
 }
 
-.react-datepicker__day--keyboard-selected {
-  background-color: #f1c40f;
-  color: #000;
-}
-
-.react-datepicker__day:hover {
+.custom-calendar .react-datepicker__day:hover {
   background-color: #444;
 }
 
-.react-datepicker__current-month,
-.react-datepicker__navigation-icon::before {
+.custom-calendar .react-datepicker__navigation-icon::before {
   color: #fff;
-}
-
-.react-datepicker__navigation {
-  top: 10px;
 }
