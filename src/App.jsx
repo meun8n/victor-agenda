@@ -1,13 +1,11 @@
-// Simplificado — substitua aqui pela versão final que criamos juntos
 import React from 'react';
 
-function App() {
+export default function App() {
   return (
     <div>
-      <h1>Agende seu serviço</h1>
-      <p>Aqui virá o componente com o calendário e horários.</p>
+      <h2>Agendamento</h2>
+      <p>Selecione uma data e horário:</p>
+      {/* Aqui futuramente colocaremos o calendário e horários */}
     </div>
   );
 }
-
-export default App;
