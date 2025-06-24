@@ -1,27 +1,61 @@
-.container-agendamento {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  font-family: Arial, sans-serif;
+/* Estilo inspirado na interface do HairDay */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container-agendamento h1 {
-  font-size: 24px;
-  margin-bottom: 16px;
+.container {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 320px;
 }
 
-.container-agendamento input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 8px;
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+input[type="date"],
+input[type="time"] {
   width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-size: 14px;
 }
 
-.container-agendamento button {
+button {
+  width: 100%;
   padding: 10px;
-  background: #6633cc;
-  color: white;
+  background-color: #f1c40f;
+  color: #000;
   border: none;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #d4ac0d;
 }
