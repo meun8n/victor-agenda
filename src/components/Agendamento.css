@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Inter', sans-serif;
+}
 /* Estiliza o popup e o calendário do react-datepicker */
 .popup-container {
   background-color: #1e1e1e;
