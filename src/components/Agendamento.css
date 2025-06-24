@@ -1,3 +1,4 @@
+
 /* Estiliza o popup e o calendário do react-datepicker */
 .popup-container {
   background-color: #1e1e1e;
@@ -10,7 +11,7 @@
 
 .titulo {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
@@ -23,8 +24,8 @@
 .input-data {
   width: 100%;
   padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #333;
+  border-radius: 12px;
+  border: 1px solid #555;
   background-color: #000;
   color: #fff;
   font-weight: bold;
@@ -77,7 +78,7 @@
 
 .custom-calendar .react-datepicker__header {
   background-color: #000;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #555;
 }
 
 .custom-calendar .react-datepicker__day,
@@ -102,7 +103,6 @@
 .custom-calendar .react-datepicker__current-month,
 .custom-calendar .react-datepicker__navigation-icon::before {
   color: #fff;
-  font-weight: bold;
 }
 
 .custom-calendar .react-datepicker__navigation {
