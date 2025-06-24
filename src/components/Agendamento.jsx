@@ -2,36 +2,71 @@ import React, { useState } from 'react';
 import './Agendamento.css';
 
 export default function Agendamento() {
-  const [data, setData] = useState('');
-  const [hora, setHora] = useState('');
+  const [dataSelecionada, setDataSelecionada] = useState('');
+  const [horaSelecionada, setHoraSelecionada] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (data && hora) {
-      alert(`Agendado para ${data} às ${hora}`);
-    } else {
-      alert('Por favor, selecione data e horário.');
-    }
+  const horarios = {
+    manhã: ['09:00', '10:00', '11:00', '12:00'],
+    tarde: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
+    noite: ['19:00', '20:00', '21:00']
   };
 
   return (
-    <div className="card">
-      <h2 className="title">Agende um atendimento</h2>
-      <p className="subtitle">Selecione uma data e horário:</p>
+    <div className="popup-container">
+      <div className="popup-card">
+        <h2 className="titulo">Agende um atendimento</h2>
+        <p className="sub">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
 
-      <form onSubmit={handleSubmit}>
+        <label>Data</label>
         <input
           type="date"
-          value={data}
-          onChange={(e) => setData(e.target.value)}
+          value={dataSelecionada}
+          onChange={(e) => setDataSelecionada(e.target.value)}
         />
-        <input
-          type="time"
-          value={hora}
-          onChange={(e) => setHora(e.target.value)}
-        />
-        <button type="submit">Agendar</button>
-      </form>
+
+        <div className="secao">
+          <span>Manhã</span>
+          <div className="botoes">
+            {horarios.manhã.map((hora) => (
+              <button
+                key={hora}
+                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(hora)}
+              >
+                {hora}
+              </button>
+            ))}
+          </div>
+
+          <span>Tarde</span>
+          <div className="botoes">
+            {horarios.tarde.map((hora) => (
+              <button
+                key={hora}
+                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(hora)}
+              >
+                {hora}
+              </button>
+            ))}
+          </div>
+
+          <span>Noite</span>
+          <div className="botoes">
+            {horarios.noite.map((hora) => (
+              <button
+                key={hora}
+                className={horaSelecionada === hora ? 'hora selecionado' : 'hora'}
+                onClick={() => setHoraSelecionada(hora)}
+              >
+                {hora}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <button className="botao-agendar">AGENDAR</button>
+      </div>
     </div>
   );
 }
