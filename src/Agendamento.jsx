@@ -1,3 +1,4 @@
+// src/components/Agendamento.jsx
 import React, { useState } from 'react';
 import './Agendamento.css';
 
@@ -25,13 +26,11 @@ export default function Agendamento() {
           value={data}
           onChange={(e) => setData(e.target.value)}
         />
-
         <input
           type="time"
           value={hora}
           onChange={(e) => setHora(e.target.value)}
         />
-
         <button type="submit">Agendar</button>
       </form>
     </div>
