@@ -1,16 +1,3 @@
-/* Estilo inspirado na interface do HairDay */
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .container {
   background-color: #1e1e1e;
   padding: 2rem;
