@@ -1,3 +1,4 @@
+/* src/App.css */
 /* Estilo inspirado na interface do HairDay */
 
 body {
@@ -8,5 +9,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
